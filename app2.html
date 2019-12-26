@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <h1 id='demo0'>Hello World</h1>
+    <h1 id='demo2'>sub yourDropDown</h1>
+    <select id="demo" onchange="clickHandler()"></select>
+    <select id="demo1" onchange="clickHandler1()" style='width: 140px;'></select>
+    <script>
+        var array = ['yourDropDown', 'A', 'E', 'I', 'M'];
+        let A = ['a', 'b', 'c', 'd'];
+        var E = ['e', 'f', 'g', 'h'];
+        var I = ['i', 'j', 'k', 'l'];
+        var M = ['m', 'n', 'o', 'p'];
+        document.getElementById('demo1').style.visibility = 'hidden';
+
+        function totalControl() {
+            var a = '';
+            array.map(val => {
+                a += `<option>${val}</option>`
+            });
+            document.getElementById('demo').innerHTML = a;
+        }
+        totalControl();
+
+        function clickHandler() {
+            let y = document.getElementById('demo').value;
+            document.getElementById('demo0').innerHTML = y + '!' + ' these are the array elements';
+            if (y) {
+                document.getElementById('demo1').style.visibility = 'visible';
+                if (y === 'A') {
+                    var b = '';
+                    A.map(val => {
+                        b += `<option>${val}</option>`
+                    });
+                    document.getElementById('demo1').innerHTML = b;
+                } else if (y === 'E') {
+                    var c = '';
+                    E.map(val => {
+                        c += `<option>${val}</option>`
+                    });
+                    document.getElementById('demo1').innerHTML = c;
+                } else if (y === 'I') {
+                    var d = '';
+                    I.map(val => {
+                        d += `<option>${val}</option>`
+                    });
+                    document.getElementById('demo1').innerHTML = d;
+                } else if (y === 'M') {
+                    var e = '';
+                    M.map(val => {
+                        e += `<option>${val}</option>`
+                    });
+                    document.getElementById('demo1').innerHTML = e;
+                }
+            }
+        }
+
+        function clickHandler1() {
+            var z = document.getElementById('demo1').value;
+            document.getElementById('demo2').innerHTML = z + '!' + ' this is subdropdown'
+        }
+
+
+    </script>
+</body>
+
+</html>

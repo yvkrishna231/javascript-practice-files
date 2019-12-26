@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+                console.log(navigator);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            console.log(position);
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude +
+                "<br>accuracy: " + position.coords.accuracy + "<br>time stamp: " + position.timestamp;
+        }
+    </script> -->
+
+    <p>latitude and longitude of current location</p>
+    <button onclick="getMyLocation()">click</button>
+    <h1 id='demo'></h1>
+
+    <script>
+        var x = document.getElementById('demo');
+        console.log(x);
+        function getMyLocation() {
+            console.log(navigator);
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = 'Geo Location is not suppoted by this browser'
+            }
+        }
+        function showPosition(o) {
+            console.log(o);
+            x.innerHTML = 'latitude: ' + position.coords.latitude + '<br>longitude: ' +
+                position.coords.longitude + '<br> timestamp: ' + position.timestamp + '<br> accuracy: ' + position.coords.accuracy
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button onclick='myFunction(" abcdefghijklmnopqrlstuvwxyz" )'>
+        click
+      </button>
+      <h1 id="demo">abcdefghijklmnopqrlstuvwxyz</h1>
+      <script>
+        function myFunction(str) {
+          var x = str.substring(2, str.length - 1);
+
+          document.getElementById("demo").innerHTML =
+            str.charAt(str.length - 1) + x + str.charAt(1);
+        }
+      </script>
+    </div>
+  </body>
+</html>

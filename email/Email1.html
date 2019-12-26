@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+        .newmessage {
+            border: 1px solid lightslategrey;
+            padding: 6px;
+                      font-size: 14px;
+            font-weight: 800;
+            border-top-left-radius: 8px;
+            outline: none;
+            border-top-right-radius: 8px;
+            color: white;
+            background-color: #404040;
+            padding-left:15px
+        }
+        .btn-group{
+            position: absolute;
+             top: 23px;
+            left: 1481px;
+        }
+        .btn {
+
+            color: white;
+            background-color: #404040;
+            border:none;
+            outline;none;
+            cursor: pointer;
+        }
+        .main{
+             border: 1px solid lightslategrey;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class='main'>
+            <h4 class='newmessage'>New Message</h4>
+            <div class='btn-group'>
+                <button class='btn'>></button>
+                <button class='btn'>></button class="btn">
+                <button class='btn' onclick='btnwidthdecreases()'>></button>
+            </div>
+            <di>
+                <form>
+                    <inputonclick="inputFunction()" placeholder="Recipients"
+                        type="text">
+                        <b>cc Bcc</b>
+                        <input placeholder="Subject" type="text">
+                        <textarea></textarea>
+                    </form>
+                </div>
+                <div>
+
+                </div>
+                <div>
+                    <button>
+                        Send <select>
+                            <option></option>
+                            <option>Shedule Send</option>
+                        </select>
+                    </button>
+                    <a href="#">a</a>
+                    <a href="#">A</a>
+                    <a href="#"><i class="fa fa-id-card"
+                            aria-hidden="true"></i></a>
+                    <a href="#">A</a>
+                    <a href="#">A</a>
+                    <a href="#">A</a>
+                    <a href="#">A</a>
+                </div>
+
+                <div class="totalbottomrightitems">
+                    <a href="#">i</a>
+                    <a href="#">d</a>
+                </div>
+            </div>
+            <script>
+        function inputFunction() {
+            document.getElementById('func').value = 'To :';
+            document.getElementById('inputbtag').style.display = 'block';
+        }
+
+        function btnwidthdecreases() {
+            document.getElementById('btnwidth').style.width = '548px';
+        }
+    </script>
+        </body>
+
+    </html>

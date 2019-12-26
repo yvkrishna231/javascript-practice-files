@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        #home {
+            background-color: lightgreen;
+            /* margin-top: 60px; */
+        }
+
+        #news {
+            background-color: lightcyan;
+            /* margin-top: 60px; */
+        }
+
+        #contact {
+            background-color: lightyellow;
+            /* margin-top: 60px; */
+        }
+
+        #about {
+            background-color: lightskyblue;
+            /* margin-top: 60px; */
+        }
+
+        .divs {
+            color: black;
+            /* display: none; */
+            padding: 100px 20px;
+            height: 100%;
+            text-align: center;
+            border: none;
+            outline: none;
+        }
+
+        .buttons {
+            font-size: 20px;
+            padding: 13px;
+            width: 24%;
+        }
+
+        .buttons:hover {
+            background-color: lightslategrey;
+        }
+
+        /* .buttons {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 25%;
+        }
+
+        .buttons:hover {
+            background-color: #777;
+        } */
+    </style>
+</head>
+
+<body>
+    <button class="buttons" onclick="pageClose('home',this,'lightgreen')" id='defaultOpen'>home</button>
+    <button class="buttons" onclick="pageClose('news',this,'lightcyan')">News</button>
+    <button class="buttons" onclick="pageClose('contact',this,'lightyellow')">contact</button>
+    <button class="buttons" onclick="pageClose('about',this,'lightskyblue')">about</button>
+    <div id='home' class="divs">
+        <h1>home</h1>
+        <p>I love my home it's fantastic</p>
+    </div>
+    <div id='news' class="divs">
+        <h1>news</h1>
+        <p>I hate news and news readers</p>
+    </div>
+    <div id='contact' class="divs">
+        <h1>contact</h1>
+        <p>I daily contact to my parents</p>
+    </div>
+    <div id='about' class="divs">
+        <h1>about</h1>
+        <p>few months back completed my studies trying to get a job</p>
+    </div>
+
+    <script>
+        function pageClose(pageName, elmnt, color) {
+            var i, divs, button;
+            divs = document.getElementsByClassName('divs');
+            for (var i = 0; i < divs.length; i++) {
+                console.log(divs[i]);
+                divs[i].style.display = 'none'
+            }
+            console.log(this);
+            button = document.getElementsByClassName('buttons');
+            for (var i = 0; i < button.length; i++) {
+                console.log(button[i]);
+                button[i].style.backgroundColor = '';
+            }
+            document.getElementById(pageName).style.display = 'block';
+            elmnt.style.backgroundColor = color;
+
+        }
+        document.getElementById('defaultOpen').click();
+    </script>
+
+</body>
+
+</html>

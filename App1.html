@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id='app'>while you change you can't see me</h1>
+    <select id='app1' onchange="clickHandler()"></select>
+    <select style="width:100px" id='app2'></select>
+    <script>
+        var array = ['your dropdowns', 'A', 'E', 'I', 'P'];
+        var A = ['a', 'b', 'c', 'd'];
+        var E = ['e', 'f', 'g', 'h'];
+        var I = ['i', 'j', 'k', 'l'];
+        var P = ['p', '0', 'n', 'm'];
+        document.getElementById('app2').style.visibility = 'hidden';
+        function displayOnChange() {
+            let x = '';
+            array.map(value => {
+                x += `<option> ${value} </option>`
+            });
+            document.getElementById('app1').innerHTML = x;
+        }
+        displayOnChange();
+        function clickHandler() {
+            let y = document.getElementById('app1').value;
+            document.getElementById('app').innerHTML = y + ' ' + `! 'This Happens When You Press'`;
+            if (y) {
+                document.getElementById('app2').style.visibility = 'visible';
+                handleDropDown(y);
+            }
+        }
+        function handleDropDown(identity) {
+            if (identity === 'A') {
+                handleSubDropDown(A);
+            } else if (identity === 'E') {
+                handleSubDropDown(E);
+            } else if (identity === 'I') {
+                handleSubDropDown(I);
+            } else if (identity === 'P') {
+                handleSubDropDown(P);
+            }
+        }
+        function handleSubDropDown(data) {
+            let data1 = '';
+            console.log(data)
+            data.map(value => {
+                data1 += `<option> ${value} </option>`
+            });
+            document.getElementById('app2').innerHTML = data1;
+        }
+    </script>
+</body>
+
+</html>

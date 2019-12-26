@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #btn1 {
+            position: absolute;
+            top: 5em;
+            left: 21em;
+            transform: translate(150px, 388px);
+            background-color: yellow;
+            color: lightslategrey;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            height: 69px;
+            width: 25px;
+        }
+
+        #btn2 {
+            position: absolute;
+            top: 5em;
+            left: 21em;
+            transform: translate(106em, 388px);
+            background-color: yellow;
+            color: lightslategrey;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            height: 69px;
+            width: 25px;
+        }
+
+        */
+    </style>
+</head>
+
+<body>
+    <div>
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image1.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image2.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image3.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image4.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image5.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image6.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image7.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image8.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image9.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image10.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image11.jpg">
+        <img style="height: 50em; width: 98em;" class="mySlides" src="../images/image12.jpg">
+        <button id='btn1' class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button id='btn2' class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+        <script>
+            // var slideIndex = 1;
+            // showDivs(slideIndex);
+
+            // function plusDivs(n) {
+            //     showDivs(slideIndex += n);
+            // }
+
+            // function showDivs(n) {
+            //     var i;
+            //     var x = document.getElementsByClassName("mySlides");
+            //     console.log(x.length);
+            //     console.log(n);
+            //     if (n > x.length) { slideIndex = 1 }
+            //     else if (n < 1) { slideIndex = x.length };
+            //     for (i = 0; i < x.length; i++) {
+            //         // console.log(x);
+            //         // console.log(x[i]);
+            //         x[i].style.display = "none";
+            //     }
+            //     console.log(x[slideIndex]);
+            //     x[slideIndex - 1].style.display = "block";
+            // }
+
+            var slideIndex = 1;
+            showDivs(slideIndex)
+            function plusDivs(n1) {
+                showDivs(slideIndex += n1);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName('mySlides');
+                if (n > x.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = 'none';
+                }
+                x[slideIndex - 1].style.display = 'block'
+            }
+
+        </script>
+
+    </div>
+</body>
+
+</html>

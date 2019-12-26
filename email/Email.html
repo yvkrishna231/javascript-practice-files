@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        .totalDiv {
+            font-family: sans-serif;
+            border: 1px solid lightslategrey;
+            border-top-left-radius: 11px;
+            border-top-right-radius: 11px;
+            width: 1189px;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .newmessage {
+            margin: 0;
+            background-color: #404040;
+            color: white;
+            position: relative;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 10px 13px;
+            font-size: 13px;
+        }
+
+        .btn-group {
+            position: absolute;
+            top: 39px;
+            left: 82%;
+        }
+
+        .btn {
+            color: white;
+            background-color: #404040;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .input-one {
+            position: relative;
+            width: 1160px;
+            margin-top: 8px;
+            border: none;
+            border-bottom: 1px solid lightslategray;
+            outline: none;
+            margin-left: 12px;
+            padding-bottom: 8px;
+        }
+
+        .input-textarea {
+            width: 1160px;
+            margin-top: 8px;
+            border: none;
+            outline: none;
+            margin-left: 12px;
+            padding-bottom: 8px;
+            height: 400px;
+        }
+
+        .select {
+            border: none;
+            outline: none;
+            width: 28px;
+            background-color: #1a73e8;
+            background: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .buttonselect {
+            height: 32px;
+            width: 87px;
+            background-color: #1a73e8;
+            margin: 11px;
+            cursor: pointer;
+            color: white;
+            border-radius: 9px;
+           outline: none;
+
+        }
+
+        .buttonselect:hover {
+            background-color: #4285f4;
+        }
+
+        .selectOption {
+            color: black;
+        }
+
+        .a-bottom {
+            border: none;
+            outline: none;
+            background: none;
+        }
+
+        .totalbottomitems {
+            position: relative;
+        }
+
+        .totalbottomrightitems {
+            position: absolute;
+            top: 597px;
+            left: 1350px;
+        }
+
+        .bottomup-items {
+            border: 1px solid lightslategray;
+            width: 650px;
+            height: 33px;
+            margin-left: 14px;
+            border-radius: 3px;
+            box-shadow: 1px solid lightslategray;
+            box-shadow: azure;
+            box-shadow: 0px 1px #888888;
+        }
+
+        .inputmiddlebtag {
+            position: absolute;
+            top: 75px;
+            right: 230px;
+            font-size: 14px;
+            font-weight: 400;
+            color: lightslategray;
+            display: none;
+        }
+    </style>
+    </head>
+
+    <body style="margin-top: 5px;">
+        <div id='btnwidth' class="totalDiv">
+            <h4 class="newmessage">New Message</h4>
+            <div id='btn-top-group' class="btn-group">
+                <button class="btn">></button>
+                <button class="btn">></button class="btn">
+                <button onclick='btnwidthdecreases()' class="btn">></button
+                    class="btn">
+            </div>
+            <div class="inputDiv">
+                <form>
+                    <input id='func' onclick="inputFunction()"
+                        placeholder="Recipients" class="input-one" type="email">
+                    <b id='inputbtag' class="inputmiddlebtag">cc Bcc</b>
+                    <input id='func1' placeholder="Subject" class="input-one"
+                        type="text">
+                    <textarea id='func2' class="input-textarea"></textarea>
+                </form>
+            </div>
+            <div id='buttonUpCard' class="bottomup-items">
+
+            </div>
+            <div class="totalbottomitems">
+                <button class="buttonselect">
+                    Send <select class="select">
+                        <option></option>
+                        <option class="selectOption">Shedule Send</option>
+                    </select>
+                </button>
+                <a class="a-bottom" href="#">a</a>
+                <a class="a-bottom" href="#">A</a>
+                <a class="a-bottom" href="#"><i class="fa fa-id-card"
+                        aria-hidden="true"></i></a>
+                <a class="a-bottom" href="#">A</a>
+                <a class="a-bottom" href="#">A</a>
+                <a class="a-bottom" href="#">A</a>
+                <a class="a-bottom" href="#">A</a>
+            </div>
+
+            <div id='total-bottom-right-items' class="totalbottomrightitems">
+                <a class="a-bottom1" href="#">i</a>
+                <a class="a-bottom1" href="#">d</a>
+            </div>
+        </div>
+        <script>
+        function inputFunction() {
+            document.getElementById('func').value = 'To :';
+            document.getElementById('inputbtag').style.display = 'block';
+        }
+        function btnwidthdecreases(){
+           document.getElementById('btnwidth').style.width = '548px';
+           document.getElementById('func').style.width = '515px';
+           document.getElementById('inputbtag').style.width = '360px'
+           document.getElementById('func1').style.width = '515px';
+            document.getElementById('func2').style.width = '515px';
+            document.getElementById('buttonUpCard').style.width = '320px';
+            document.getElementById('total-bottom-right-items').style.left= '1013px';
+             document.getElementById('total-bottom-right-items').style.top= '597px';
+            document.getElementById('btn-top-group').style.left= '62%';
+        }
+    </script>
+    </body>
+
+</html>
