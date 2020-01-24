@@ -1,43 +1,46 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <style>
-        #div2 {
-            width: 350px;
-            height: 70px;
-            padding: 10px;
-            border: 1px solid #aaaaaa;
-        }
+      #div2 {
+        width: 350px;
+        height: 70px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+      }
     </style>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <p>Drag the W3Schools image into the rectangle:</p>
 
     <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <br>
-    <img id="drag1" src="../elephant.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+    <br />
+    <img
+      id="drag1"
+      src="../elephant.jpg"
+      draggable="true"
+      ondragstart="drag(event)"
+      width="336"
+      height="69"
+    />
 
     <script>
-        function allowDrop(ev) {
-            console.log(ev.target);
-            ev.preventDefault();
-        }
+      function allowDrop(ev) {
+        console.log(ev.target);
+        ev.preventDefault();
+      }
 
-        function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-        }
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
 
-        function drop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-          
-            ev.target.appendChild(document.getElementById(data));
-        }
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+
+        ev.target.appendChild(document.getElementById(data));
+      }
     </script>
-</body>
-
+  </body>
 </html>

@@ -105,7 +105,7 @@
 
         .totalbottomrightitems {
             position: absolute;
-            top: 597px;
+            top: 610px;
             left: 1350px;
         }
 
@@ -132,13 +132,13 @@
     </style>
     </head>
 
-    <body style="margin-top: 5px;">
+    <body id='bodyitem' style="margin-top: 5px;">
         <div id='btnwidth' class="totalDiv">
             <h4 class="newmessage">New Message</h4>
             <div id='btn-top-group' class="btn-group">
                 <button class="btn">></button>
-                <button class="btn">></button class="btn">
-                <button onclick='btnwidthdecreases()' class="btn">></button
+                <button onclick='btnwidthdecreases()' class="btn">></button>
+                <button onclick='displaynone()' class="btn">></button
                     class="btn">
             </div>
             <div class="inputDiv">
@@ -183,14 +183,17 @@
         }
         function btnwidthdecreases(){
            document.getElementById('btnwidth').style.width = '548px';
-           document.getElementById('func').style.width = '515px';
+           document.getElementById('func').style.width = '524px';
            document.getElementById('inputbtag').style.width = '360px'
-           document.getElementById('func1').style.width = '515px';
-            document.getElementById('func2').style.width = '515px';
+           document.getElementById('func1').style.width = '524px';
+            document.getElementById('func2').style.width = '524px';
             document.getElementById('buttonUpCard').style.width = '320px';
             document.getElementById('total-bottom-right-items').style.left= '1013px';
-             document.getElementById('total-bottom-right-items').style.top= '597px';
+             document.getElementById('total-bottom-right-items').style.top= '610px';
             document.getElementById('btn-top-group').style.left= '62%';
+        }
+        function displaynone(){
+document.getElementById('bodyitem').style.display = 'none';
         }
     </script>
     </body>
